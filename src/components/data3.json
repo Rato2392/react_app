@@ -1,0 +1,867 @@
+{
+  "links": {
+    "first": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes?page=1",
+    "last": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes?page=20",
+    "next": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes?page=2",
+    "prev": null
+  },
+  "data": [
+    {
+      "type": "biomes",
+      "id": "root:Engineered",
+      "attributes": {
+        "samples_count": 239,
+        "biome_name": "Engineered",
+        "lineage": "root:Engineered"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Biogas plant",
+      "attributes": {
+        "samples_count": 107,
+        "biome_name": "Biogas plant",
+        "lineage": "root:Engineered:Biogas plant"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Biogas%20plant/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Biogas%20plant/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Biogas%20plant/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Biogas%20plant/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Biogas%20plant"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Biogas plant:Wet fermentation",
+      "attributes": {
+        "samples_count": 111,
+        "biome_name": "Wet fermentation",
+        "lineage": "root:Engineered:Biogas plant:Wet fermentation"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Biogas%20plant:Wet%20fermentation/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Biogas%20plant:Wet%20fermentation/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Biogas%20plant:Wet%20fermentation/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Biogas%20plant:Wet%20fermentation/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Biogas%20plant:Wet%20fermentation"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioreactor",
+      "attributes": {
+        "samples_count": 1003,
+        "biome_name": "Bioreactor",
+        "lineage": "root:Engineered:Bioreactor"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioreactor:Continuous culture",
+      "attributes": {
+        "samples_count": 647,
+        "biome_name": "Continuous culture",
+        "lineage": "root:Engineered:Bioreactor:Continuous culture"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioreactor:Continuous culture:Marine intertidal flat sediment inoculum",
+      "attributes": {
+        "samples_count": 23,
+        "biome_name": "Marine intertidal flat sediment inoculum",
+        "lineage": "root:Engineered:Bioreactor:Continuous culture:Marine intertidal flat sediment inoculum"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20intertidal%20flat%20sediment%20inoculum/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20intertidal%20flat%20sediment%20inoculum/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20intertidal%20flat%20sediment%20inoculum/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20intertidal%20flat%20sediment%20inoculum/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20intertidal%20flat%20sediment%20inoculum"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioreactor:Continuous culture:Marine intertidal flat sediment inoculum:Wadden Sea-Germany",
+      "attributes": {
+        "samples_count": 4,
+        "biome_name": "Wadden Sea-Germany",
+        "lineage": "root:Engineered:Bioreactor:Continuous culture:Marine intertidal flat sediment inoculum:Wadden Sea-Germany"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20intertidal%20flat%20sediment%20inoculum:Wadden%20Sea-Germany/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20intertidal%20flat%20sediment%20inoculum:Wadden%20Sea-Germany/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20intertidal%20flat%20sediment%20inoculum:Wadden%20Sea-Germany/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20intertidal%20flat%20sediment%20inoculum:Wadden%20Sea-Germany/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20intertidal%20flat%20sediment%20inoculum:Wadden%20Sea-Germany"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioreactor:Continuous culture:Marine sediment inoculum",
+      "attributes": {
+        "samples_count": 35,
+        "biome_name": "Marine sediment inoculum",
+        "lineage": "root:Engineered:Bioreactor:Continuous culture:Marine sediment inoculum"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20sediment%20inoculum/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20sediment%20inoculum/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20sediment%20inoculum/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20sediment%20inoculum/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20sediment%20inoculum"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioreactor:Continuous culture:Marine sediment inoculum:Wadden Sea-Germany",
+      "attributes": {
+        "samples_count": 8,
+        "biome_name": "Wadden Sea-Germany",
+        "lineage": "root:Engineered:Bioreactor:Continuous culture:Marine sediment inoculum:Wadden Sea-Germany"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20sediment%20inoculum:Wadden%20Sea-Germany/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20sediment%20inoculum:Wadden%20Sea-Germany/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20sediment%20inoculum:Wadden%20Sea-Germany/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20sediment%20inoculum:Wadden%20Sea-Germany/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioreactor:Continuous%20culture:Marine%20sediment%20inoculum:Wadden%20Sea-Germany"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation",
+      "attributes": {
+        "samples_count": 49,
+        "biome_name": "Bioremediation",
+        "lineage": "root:Engineered:Bioremediation"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Hydrocarbon",
+      "attributes": {
+        "samples_count": 65,
+        "biome_name": "Hydrocarbon",
+        "lineage": "root:Engineered:Bioremediation:Hydrocarbon"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Hydrocarbon:Benzene",
+      "attributes": {
+        "samples_count": 0,
+        "biome_name": "Benzene",
+        "lineage": "root:Engineered:Bioremediation:Hydrocarbon:Benzene"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon:Benzene/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon:Benzene/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon:Benzene/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon:Benzene/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon:Benzene"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Hydrocarbon:Benzene:Bioreactor",
+      "attributes": {
+        "samples_count": 2,
+        "biome_name": "Bioreactor",
+        "lineage": "root:Engineered:Bioremediation:Hydrocarbon:Benzene:Bioreactor"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon:Benzene:Bioreactor/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon:Benzene:Bioreactor/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon:Benzene:Bioreactor/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon:Benzene:Bioreactor/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Hydrocarbon:Benzene:Bioreactor"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Metal",
+      "attributes": {
+        "samples_count": 0,
+        "biome_name": "Metal",
+        "lineage": "root:Engineered:Bioremediation:Metal"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Metal/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Metal/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Metal/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Metal/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Metal"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Persistent organic pollutants (POP)",
+      "attributes": {
+        "samples_count": 53,
+        "biome_name": "Persistent organic pollutants (POP)",
+        "lineage": "root:Engineered:Bioremediation:Persistent organic pollutants (POP)"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Persistent%20organic%20pollutants%20(POP)/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Persistent%20organic%20pollutants%20(POP)/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Persistent%20organic%20pollutants%20(POP)/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Persistent%20organic%20pollutants%20(POP)/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Persistent%20organic%20pollutants%20(POP)"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Persistent organic pollutants (POP):Polycyclic aromatic hydrocarbons",
+      "attributes": {
+        "samples_count": 0,
+        "biome_name": "Polycyclic aromatic hydrocarbons",
+        "lineage": "root:Engineered:Bioremediation:Persistent organic pollutants (POP):Polycyclic aromatic hydrocarbons"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Persistent%20organic%20pollutants%20(POP):Polycyclic%20aromatic%20hydrocarbons/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Persistent%20organic%20pollutants%20(POP):Polycyclic%20aromatic%20hydrocarbons/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Persistent%20organic%20pollutants%20(POP):Polycyclic%20aromatic%20hydrocarbons/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Persistent%20organic%20pollutants%20(POP):Polycyclic%20aromatic%20hydrocarbons/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Persistent%20organic%20pollutants%20(POP):Polycyclic%20aromatic%20hydrocarbons"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Terephthalate",
+      "attributes": {
+        "samples_count": 0,
+        "biome_name": "Terephthalate",
+        "lineage": "root:Engineered:Bioremediation:Terephthalate"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Terephthalate:Wastewater",
+      "attributes": {
+        "samples_count": 92,
+        "biome_name": "Wastewater",
+        "lineage": "root:Engineered:Bioremediation:Terephthalate:Wastewater"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Terephthalate:Wastewater:Activated sludge",
+      "attributes": {
+        "samples_count": 0,
+        "biome_name": "Activated sludge",
+        "lineage": "root:Engineered:Bioremediation:Terephthalate:Wastewater:Activated sludge"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater:Activated%20sludge/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater:Activated%20sludge/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater:Activated%20sludge/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater:Activated%20sludge/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater:Activated%20sludge"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Terephthalate:Wastewater:Bioreactor",
+      "attributes": {
+        "samples_count": 4,
+        "biome_name": "Bioreactor",
+        "lineage": "root:Engineered:Bioremediation:Terephthalate:Wastewater:Bioreactor"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater:Bioreactor/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater:Bioreactor/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater:Bioreactor/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater:Bioreactor/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Terephthalate:Wastewater:Bioreactor"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Tetrachloroethylene and derivatives",
+      "attributes": {
+        "samples_count": 0,
+        "biome_name": "Tetrachloroethylene and derivatives",
+        "lineage": "root:Engineered:Bioremediation:Tetrachloroethylene and derivatives"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Tetrachloroethylene and derivatives:Chloroethene",
+      "attributes": {
+        "samples_count": 0,
+        "biome_name": "Chloroethene",
+        "lineage": "root:Engineered:Bioremediation:Tetrachloroethylene and derivatives:Chloroethene"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Chloroethene/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Chloroethene/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Chloroethene/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Chloroethene/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Chloroethene"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Tetrachloroethylene and derivatives:Chloroethene:Bioreactor",
+      "attributes": {
+        "samples_count": 0,
+        "biome_name": "Bioreactor",
+        "lineage": "root:Engineered:Bioremediation:Tetrachloroethylene and derivatives:Chloroethene:Bioreactor"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Chloroethene:Bioreactor/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Chloroethene:Bioreactor/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Chloroethene:Bioreactor/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Chloroethene:Bioreactor/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Chloroethene:Bioreactor"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Tetrachloroethylene and derivatives:Tetrachloroethylene",
+      "attributes": {
+        "samples_count": 0,
+        "biome_name": "Tetrachloroethylene",
+        "lineage": "root:Engineered:Bioremediation:Tetrachloroethylene and derivatives:Tetrachloroethylene"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Tetrachloroethylene/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Tetrachloroethylene/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Tetrachloroethylene/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Tetrachloroethylene/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Tetrachloroethylene"
+      }
+    },
+    {
+      "type": "biomes",
+      "id": "root:Engineered:Bioremediation:Tetrachloroethylene and derivatives:Tetrachloroethylene:Bioreactor",
+      "attributes": {
+        "samples_count": 0,
+        "biome_name": "Bioreactor",
+        "lineage": "root:Engineered:Bioremediation:Tetrachloroethylene and derivatives:Tetrachloroethylene:Bioreactor"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Tetrachloroethylene:Bioreactor/children"
+          }
+        },
+        "genomes": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Tetrachloroethylene:Bioreactor/genomes"
+          }
+        },
+        "samples": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Tetrachloroethylene:Bioreactor/samples"
+          }
+        },
+        "studies": {
+          "links": {
+            "related": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Tetrachloroethylene:Bioreactor/studies"
+          }
+        }
+      },
+      "links": {
+        "self": "https://www.ebi.ac.uk/metagenomics/api/v1/biomes/root:Engineered:Bioremediation:Tetrachloroethylene%20and%20derivatives:Tetrachloroethylene:Bioreactor"
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pages": 20,
+      "count": 491
+    }
+  }
+}
