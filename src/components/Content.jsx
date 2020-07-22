@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
 const Content = () => {
   const classes = useStyles();
   return (
-    <Grid container item position="static" direction="column">
+    <Grid xs={10} container item position="static" direction="column">
       <Typography
         className={classes.title}
         color="initial"

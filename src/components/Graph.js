@@ -1,19 +1,9 @@
 import React from "react";
-import {
-  Grid,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Table,
-  Paper,
-} from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { data } from "./data3.json";
 import { Bar } from "react-chartjs-2";
-import Table_test from "./table.jsx";
+import { Chart } from "chart.js";
 import { makeStyles } from "@material-ui/core/styles";
-import { render } from "@testing-library/react";
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -23,10 +13,10 @@ const useStyles = makeStyles(() => ({
 }));
 const Data_Table = () => {
   const classes = useStyles();
-  var id_graph = [];
   var samples_count_graph = [];
+  var biome_name_graph = [];
   const data_graph = {
-    labels: id_graph,
+    labels: biome_name_graph,
     datasets: [
       {
         data: samples_count_graph,
@@ -43,24 +33,28 @@ const Data_Table = () => {
     ],
   };
 
-  render();
-  {
-    return (
-      <Paper className={classes.container}>
-        {data.map((ppidd) => {
-          const { type, id, attributes } = ppidd;
-          const { samples_count, biome_name, lineage } = attributes;
+  return (
+    <Grid
+      padding={2}
+      container
+      item
+      xs={12}
+      position="static"
+      className={classes.container}
+    >
+      {data.map((ppidd) => {
+        const { attributes } = ppidd;
+        const { samples_count, biome_name } = attributes;
 
-          id_graph.push(id);
-          samples_count_graph.push(samples_count);
+        biome_name_graph.push(biome_name);
+        samples_count_graph.push(samples_count);
 
-          return null;
-        })}
+        return null;
+      })}
 
-        <Bar data={data_graph} />
-      </Paper>
-    );
-  }
+      <Bar data={data_graph} />
+    </Grid>
+  );
 };
 
 export default Data_Table;

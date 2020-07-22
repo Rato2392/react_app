@@ -55,7 +55,7 @@ const TextBox = () => {
         container
         item
         xs={12}
-        sm={6}
+        sm={8}
         justify="center"
         alignItems="center"
         direction="column"
@@ -104,7 +104,7 @@ const TextBox = () => {
         container
         item
         xs={12}
-        sm={6}
+        sm={4}
         justify="center"
         alignItems="center"
         direction="column"

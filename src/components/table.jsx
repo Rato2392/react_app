@@ -7,10 +7,8 @@ import {
   TableHead,
   TableRow,
   Table,
-  Paper,
 } from "@material-ui/core";
 import { data } from "./data3.json";
-import { Bar } from "react-chartjs-2";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -22,10 +20,17 @@ const useStyles = makeStyles({
   },
 });
 
-const Table_test = () => {
+const Table_Test = () => {
   const classes = useStyles();
   return (
-    <Paper className={classes.root}>
+    <Grid
+      padding={2}
+      container
+      item
+      xs={12}
+      position="static"
+      className={classes.root}
+    >
       <TableContainer className={classes.container}>
         <Table stickyHeader>
           <TableHead>
@@ -67,8 +72,8 @@ const Table_test = () => {
           </TableBody>
         </Table>
       </TableContainer>
-    </Paper>
+    </Grid>
   );
 };
 
-export default Table_test;
+export default Table_Test;
