@@ -33,10 +33,10 @@ const DataTable = () => {
       className={classes.main_container}
       justify="space-between"
     >
-      <Grid container item xs={12} className={classes.second_container} item>
+      <Grid container item xs={12} className={classes.second_container}>
         <Table_Test />
       </Grid>
-      <Grid container item xs={12} className={classes.second_container} item>
+      <Grid container item xs={12} className={classes.second_container}>
         <Data_Table />
       </Grid>
     </Grid>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import { data } from "./data3.json";
+import { data } from "../data3.json";
 import { Bar } from "react-chartjs-2";
 import { Chart } from "chart.js";
 import { makeStyles } from "@material-ui/core/styles";

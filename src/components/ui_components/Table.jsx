@@ -8,7 +8,7 @@ import {
   TableRow,
   Table,
 } from "@material-ui/core";
-import { data } from "./data3.json";
+import { data } from "../data3.json";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({

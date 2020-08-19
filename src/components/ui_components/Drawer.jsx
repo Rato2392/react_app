@@ -5,22 +5,15 @@ import {
   List,
   ListItemIcon,
   ListItemText,
-  Toolbar,
-  AppBar,
-  Button,
-  Grid,
-  Tabs,
-  Tab,
-  Card,
-  CardMedia,
-  Paper,
 } from "@material-ui/core";
+import clsx from "clsx";
 import HomeIcon from "@material-ui/icons/Home";
-import { makeStyles } from "@material-ui/core/styles";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+//import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import { withRouter } from "react-router-dom";
-
+import IconButton from "@material-ui/core/IconButton";
+const drawerWidth = 240;
 const useStyles = makeStyles({
   MuiPaper: {
     color: "white",
@@ -29,13 +22,15 @@ const useStyles = makeStyles({
 });
 
 const Drawer = (props) => {
+  const [open, setOpen] = React.useState(false);
+
   const { history } = props;
   const classes = useStyles();
   const itemsList = [
     {
       text: "Home",
       icon: <HomeIcon style={{ color: "orange" }} />,
-      onClick: () => history.push("/"),
+      onClick: () => history.push("/home"),
     },
     {
       text: "About",
@@ -47,9 +42,18 @@ const Drawer = (props) => {
       icon: <MailIcon style={{ color: "orange" }} />,
       onClick: () => history.push("/contact"),
     },
+    {
+      text: "Form",
+      icon: <MailIcon style={{ color: "orange" }} />,
+      onClick: () => history.push("/form"),
+    },
   ];
   return (
-    <MUIDrawer variant="permanent" classes={{ paper: classes.MuiPaper }}>
+    <MUIDrawer
+      variant="permanent"
+      classes={{ paper: classes.MuiPaper }}
+      width={{ width: "100%" }}
+    >
       <List>
         {itemsList.map((item, index) => {
           const { text, icon, onClick } = item;
