@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Toolbar, AppBar, Grid, Card } from "@material-ui/core";
 import {
   Drawer as MUIDrawer,
@@ -8,15 +8,26 @@ import {
   ListItemText,
 } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
-
+import clsx from "clsx";
 //import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import { withRouter } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(() => ({
+import CssBaseline from "@material-ui/core/CssBaseline";
+
+import Typography from "@material-ui/core/Typography";
+import Divider from "@material-ui/core/Divider";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+
+import InboxIcon from "@material-ui/icons/MoveToInbox";
+const drawerWidth = 200;
+const useStyles = makeStyles((theme) => ({
   colour: {
-    backgroundColor: "Orange",
+    backgroundColor: "#00acc1",
     width: "100%",
     marginLeft: 0,
   },
@@ -27,7 +38,7 @@ const useStyles = makeStyles(() => ({
   },
   grid_container: {
     spacing: 0,
-    backgroundColor: "orange",
+    backgroundColor: "#00acc1",
   },
 }));
 
@@ -45,13 +56,38 @@ const App_bar_ui = (props) => {
   const itemsList = [
     {
       text: "Login",
-      icon: <HomeIcon style={{ color: "orange" }} />,
+      icon: <HomeIcon style={{ color: "rgb(0 172 193)" }} />,
       onClick: () => history.push("/Login"),
     },
     {
       text: "Register",
-      icon: <MailIcon style={{ color: "orange" }} />,
+      icon: <MailIcon style={{ color: "rgb(0 172 193)" }} />,
       onClick: () => history.push("/Register"),
+    },
+    {
+      text: "Logout",
+      icon: <MailIcon style={{ color: "rgb(0 172 193)" }} />,
+      onClick: () => history.push("/Logout"),
+    },
+    {
+      text: "Home",
+      icon: <HomeIcon style={{ color: "rgb(0 172 193)" }} />,
+      onClick: () => history.push("/home"),
+    },
+    {
+      text: "About",
+      icon: <MailIcon style={{ color: "rgb(0 172 193)" }} />,
+      onClick: () => history.push("/about"),
+    },
+    {
+      text: "Contact",
+      icon: <MailIcon style={{ color: "rgb(0 172 193)" }} />,
+      onClick: () => history.push("/contact"),
+    },
+    {
+      text: "Form",
+      icon: <MailIcon style={{ color: "rgb(0 172 193)" }} />,
+      onClick: () => history.push("/form"),
     },
   ];
 
@@ -65,7 +101,7 @@ const App_bar_ui = (props) => {
       xs={12}
       className={classes.grid_container}
     >
-      <AppBar position="static" className={classes.colour} elevation={0}>
+      <AppBar position="fixed" className={clsx(classes.colour)} elevation={0}>
         <Toolbar
           className={classes.AppBar}
           disableGutters={false}
@@ -73,6 +109,14 @@ const App_bar_ui = (props) => {
         >
           <Card elevation={0} square={true}>
             <List style={flexContainer}>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                onClick={props.click}
+              >
+                <MenuIcon style={{ color: "rgb(0 172 193)" }} />
+                <ListItemText primary={"Show"} />
+              </IconButton>
               {itemsList.map((item, index) => {
                 const { text, icon, onClick } = item;
                 return (

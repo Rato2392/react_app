@@ -13,8 +13,8 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import Biodata_elixir from "C:\\Users\\João\\react-app\\src\\components\\images\\biodata_elixi.png";
 import TextBox from "./Text_box";
-import Content from "./Content.jsx";
-import DataTable from "./DataTable.jsx";
+import Content from "./Content.jsx.js";
+import DataTable from "./DataTable.jsx.js";
 
 const useStyles = makeStyles(() => ({
   typographyStyles: {

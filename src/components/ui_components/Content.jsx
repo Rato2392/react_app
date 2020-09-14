@@ -13,24 +13,34 @@ const useStyles = makeStyles(() => ({
 const Content = () => {
   const classes = useStyles();
   return (
-    <Grid xs={10} container item position="static" direction="column">
-      <Typography
-        className={classes.title}
-        color="initial"
-        component={("h2", "b")}
-      >
-        <h2>Contacts</h2>
-        <b>E-mail: </b>
-        info [at] biodata [dot] pt
-      </Typography>
-      <Typography className={classes.title} color="initial">
-        <b>Telephone:</b>
-        (351) 214407911
-      </Typography>
-      <Typography className={classes.title} color="initial">
-        <b>Address (Headquarters):</b>
-        Rua da Quinta Grande 6, 2780-156 Oeiras, Portugal
-      </Typography>
+    <Grid
+      xs={12}
+      container
+      item
+      position="static"
+      direction="column"
+      justify="center"
+      alignItems="center"
+    >
+      <Grid>
+        <Typography
+          className={classes.title}
+          color="initial"
+          component={("h2", "b")}
+        >
+          <h2>Contacts</h2>
+          <b>E-mail: </b>
+          info [at] biodata [dot] pt
+        </Typography>
+        <Typography className={classes.title} color="initial">
+          <b>Telephone:</b>
+          (351) 214407911
+        </Typography>
+        <Typography className={classes.title} color="initial">
+          <b>Address (Headquarters):</b>
+          Rua da Quinta Grande 6, 2780-156 Oeiras, Portugal
+        </Typography>
+      </Grid>
     </Grid>
   );
 };

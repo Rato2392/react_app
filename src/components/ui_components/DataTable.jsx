@@ -7,19 +7,16 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
   main_container: {
-    marginTop: 25,
+    marginTop: 60,
     position: "static",
 
-    width: "100%",
-    height: "100%",
+    width: "100vh",
   },
   second_container: {
     margin: 25,
     marginTop: 25,
-    position: "static",
+    position: "flex",
     marginBottom: 25,
-    width: "100%",
-    height: "100%",
   },
 }));
 
@@ -30,6 +27,7 @@ const DataTable = () => {
       container
       item
       xs={12}
+      direction="column"
       className={classes.main_container}
       justify="space-between"
     >

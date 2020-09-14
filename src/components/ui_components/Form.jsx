@@ -18,6 +18,7 @@ const Form = () => {
 
   const onSubmitForm = async (e) => {
     try {
+      e.preventDefault();
       const body = { first_name };
       const response = await fetch("http://localhost:5000/users", {
         method: "POST",

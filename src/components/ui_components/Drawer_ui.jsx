@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Drawer as MUIDrawer,
   ListItem,
@@ -12,49 +12,77 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 //import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import { withRouter } from "react-router-dom";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import IconButton from "@material-ui/core/IconButton";
-const drawerWidth = 240;
-const useStyles = makeStyles({
-  MuiPaper: {
+import ReactCSSTransitionGroup from "react-transition-group";
+
+const drawerWidth = 200;
+const useStyles = makeStyles((theme) => ({
+  drawerPaper: {
+    width: drawerWidth,
     color: "white",
     backgroundColor: "black",
+    transition: "850ms",
+    display: "flex",
   },
-});
+  drawerHeader: {
+    display: "flex",
+    alignItems: "center",
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+  },
+}));
 
-const Drawer = (props) => {
-  const [open, setOpen] = React.useState(false);
+const Drawer_ui = (props) => {
+  const theme = useTheme();
 
   const { history } = props;
   const classes = useStyles();
   const itemsList = [
     {
       text: "Home",
-      icon: <HomeIcon style={{ color: "orange" }} />,
+      icon: <HomeIcon style={{ color: "rgb(0 172 193)" }} />,
       onClick: () => history.push("/home"),
     },
     {
       text: "About",
-      icon: <MailIcon style={{ color: "orange" }} />,
+      icon: <MailIcon style={{ color: "rgb(0 172 193)" }} />,
       onClick: () => history.push("/about"),
     },
     {
       text: "Contact",
-      icon: <MailIcon style={{ color: "orange" }} />,
+      icon: <MailIcon style={{ color: "rgb(0 172 193)" }} />,
       onClick: () => history.push("/contact"),
     },
     {
       text: "Form",
-      icon: <MailIcon style={{ color: "orange" }} />,
+      icon: <MailIcon style={{ color: "rgb(0 172 193)" }} />,
       onClick: () => history.push("/form"),
     },
   ];
+
+  const clickhandler = (e) => {
+    e.preventDefault();
+    props.close();
+  };
   return (
     <MUIDrawer
       variant="permanent"
-      classes={{ paper: classes.MuiPaper }}
-      width={{ width: "100%" }}
+      anchor="left"
+      classes={{
+        paper: classes.drawerPaper,
+      }}
     >
       <List>
+        <div className={classes.drawerHeader}>
+          <IconButton
+            onClick={clickhandler}
+            style={{ color: "rgb(0 172 193)" }}
+          >
+            close
+          </IconButton>
+        </div>
         {itemsList.map((item, index) => {
           const { text, icon, onClick } = item;
           return (
@@ -69,4 +97,4 @@ const Drawer = (props) => {
   );
 };
 
-export default withRouter(Drawer);
+export default withRouter(Drawer_ui);
