@@ -3,21 +3,28 @@ import {
   Grid,
   Button,
   TextField,
+  Typography,
   Card,
   CardContent,
   CardHeader,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
+import ListTodos from "../List_Users";
+import { toast } from "react-toastify";
+import { Slide } from "react-toastify";
 
 const useStyles = makeStyles(() => ({
   text_field_container: {
+    margin: 25,
+
+    position: "static",
+
     width: "100%",
     height: "100%",
   },
   text_field_spacing: { margin: 25 },
   title: {
     fontSize: 16,
-    fontWeight: "fontWeightBold",
   },
   paper_center: {
     justifyContent: "center",
@@ -25,7 +32,7 @@ const useStyles = makeStyles(() => ({
     justify: "center",
     alignItems: "center",
     width: 500,
-    border: "12px solid rgb(0 172 193)",
+    border: "8px solid rgb(0 172 193)",
   },
   button_style: {
     boxShadow:
@@ -34,13 +41,16 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const Login = ({ setAuth }) => {
+const Register = ({ setAuth }) => {
   const classes = useStyles();
   const [inputs, setInputs] = useState({
+    first_name: "",
+    last_name: "",
     email: "",
     users_password: "",
+    institute: "",
   });
-  const { email, users_password } = inputs;
+  const { first_name, last_name, email, users_password, institute } = inputs;
 
   const onChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
@@ -49,21 +59,44 @@ const Login = ({ setAuth }) => {
   const onSubmitForm = async (e) => {
     try {
       e.preventDefault();
-      const body = { email, users_password };
-      const response = await fetch("http://localhost:5000/login", {
+      const body = { first_name, last_name, email, users_password, institute };
+      const response = await fetch("http://localhost:5000/register", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(body),
       });
 
       const parseRes = await response.json();
-      localStorage.setItem("token", parseRes.token);
-      setAuth(true);
+      if (parseRes.jwttoken) {
+        localStorage.setItem("token", parseRes.jwttoken);
+        setAuth(true);
+        toast.success("Register successfull", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          transition: Slide,
+        });
+      } else {
+        setAuth(false);
+        toast.error(parseRes, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          transition: Slide,
+        });
+      }
     } catch (err) {
       console.error(err.message);
     }
   };
-
   return (
     <Grid
       xs={12}
@@ -78,15 +111,39 @@ const Login = ({ setAuth }) => {
       <Card elevation={3} className={classes.paper_center} variant="outlined">
         <form onSubmit={onSubmitForm}>
           <CardHeader
-            title="Login"
+            title="Register"
             display="static"
             style={{
               textAlign: "center",
               fontSize: 16,
-              fontWeight: "fontWeightBold",
             }}
           />
-
+          <CardContent>
+            <TextField
+              required
+              type="text"
+              id="outlined-basic"
+              variant="outlined"
+              value={first_name}
+              name="first_name"
+              placeholder="First name"
+              onChange={(e) => onChange(e)}
+              style={{ width: "100%" }}
+            />
+          </CardContent>
+          <CardContent>
+            <TextField
+              required
+              type="text"
+              id="outlined-basic"
+              variant="outlined"
+              value={last_name}
+              placeholder="Last name"
+              name="last_name"
+              onChange={(e) => onChange(e)}
+              style={{ width: "100%" }}
+            />
+          </CardContent>
           <CardContent>
             <TextField
               required
@@ -113,16 +170,27 @@ const Login = ({ setAuth }) => {
               style={{ width: "100%" }}
             />
           </CardContent>
-
+          <CardContent>
+            <TextField
+              type="text"
+              id="outlined-basic"
+              variant="outlined"
+              value={institute}
+              placeholder="Institute"
+              name="institute"
+              onChange={(e) => onChange(e)}
+              style={{ width: "100%" }}
+            />
+          </CardContent>
           <CardContent>
             <Button
               variant="contained"
-              type="login"
+              type="submit"
               style={{ width: "100%" }}
               className={classes.button_style}
             >
               {" "}
-              Login{" "}
+              Submit{" "}
             </Button>
           </CardContent>
         </form>
@@ -132,9 +200,9 @@ const Login = ({ setAuth }) => {
             type="link"
             style={{ width: "100%" }}
             className={classes.button_style}
-            href="/register"
+            href="/login"
           >
-            Don't have an account? Register here
+            Already registered? Login here
           </Button>
         </CardContent>
       </Card>
@@ -142,4 +210,4 @@ const Login = ({ setAuth }) => {
   );
 };
 
-export default Login;
+export default Register;

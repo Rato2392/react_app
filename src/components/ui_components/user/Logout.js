@@ -6,9 +6,10 @@ import {
   Card,
   CardContent,
   CardHeader,
-  Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
+import { toast } from "react-toastify";
+import { Slide } from "react-toastify";
 
 const useStyles = makeStyles(() => ({
   text_field_container: {
@@ -22,7 +23,6 @@ const useStyles = makeStyles(() => ({
   text_field_spacing: { margin: 25 },
   title: {
     fontSize: 16,
-    fontWeight: "fontWeightBold",
   },
   paper_center: {
     justifyContent: "center",
@@ -30,7 +30,7 @@ const useStyles = makeStyles(() => ({
     justify: "center",
     alignItems: "center",
     width: 500,
-    border: "12px solid rgb(0 172 193)",
+    border: "8px solid rgb(0 172 193)",
   },
   button_style: {
     boxShadow:
@@ -44,7 +44,18 @@ const Logout = ({ setAuth }) => {
   const end_session = async (e) => {
     e.preventDefault();
     localStorage.removeItem("token");
+    localStorage.removeItem("jwt_token");
     setAuth(false);
+    toast.success("Log out successfull", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      transition: Slide,
+    });
   };
   return (
     <Grid xs={12} container item position="static" direction="row">
@@ -66,7 +77,6 @@ const Logout = ({ setAuth }) => {
             style={{
               textAlign: "center",
               fontSize: 25,
-              fontWeight: "fontWeightBold",
             }}
           >
             {" "}

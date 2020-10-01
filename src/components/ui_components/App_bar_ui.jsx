@@ -1,44 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import { Toolbar, AppBar, Grid, Card } from "@material-ui/core";
-import {
-  Drawer as MUIDrawer,
-  ListItem,
-  List,
-  ListItemIcon,
-  ListItemText,
-} from "@material-ui/core";
+import { ListItem, List, ListItemIcon, ListItemText } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 import clsx from "clsx";
-//import InboxIcon from "@material-ui/icons/MoveToInbox";
+
 import MailIcon from "@material-ui/icons/Mail";
 import { withRouter } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
-import CssBaseline from "@material-ui/core/CssBaseline";
-
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-const drawerWidth = 200;
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+
+import Menu from "@material-ui/core/Menu";
+//styles
 const useStyles = makeStyles((theme) => ({
   colour: {
     backgroundColor: "#00acc1",
-    width: "100%",
-    marginLeft: 0,
   },
   AppBar: {
     alignItems: "center",
     height: 90,
-    width: "100%",
   },
   grid_container: {
-    spacing: 0,
     backgroundColor: "#00acc1",
+  },
+  card_container: {
+    flexGrow: 1,
   },
 }));
 
@@ -51,8 +39,40 @@ const App_bar_ui = (props) => {
   };
   //passing props from APP
   const { history } = props;
+  //get styles class
   const classes = useStyles();
-  //defining the routes used
+
+  /**
+   * get open state for the login/register/logout componnent
+   * set where the menu will open
+   *
+   * handletoggle function, open the menu on press
+   *
+   * handleclose function, close when press outside menu
+   */
+
+  const [open, setOpen] = React.useState(false);
+  const anchorRef = React.useRef(null);
+  const handleToggle = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
+  const handleClose = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return;
+    }
+    setOpen(false);
+  };
+
+  // return focus to the button when we transitioned from !open -> open
+  const prevOpen = React.useRef(open);
+  React.useEffect(() => {
+    if (prevOpen.current === true && open === false) {
+      anchorRef.current.focus();
+    }
+    prevOpen.current = open;
+  }, [open]);
+
+  // list of items that show up on user menu
   const itemsList = [
     {
       text: "Login",
@@ -69,6 +89,10 @@ const App_bar_ui = (props) => {
       icon: <MailIcon style={{ color: "rgb(0 172 193)" }} />,
       onClick: () => history.push("/Logout"),
     },
+  ];
+
+  //list of items on the app bar
+  const menulist = [
     {
       text: "Home",
       icon: <HomeIcon style={{ color: "rgb(0 172 193)" }} />,
@@ -89,45 +113,104 @@ const App_bar_ui = (props) => {
       icon: <MailIcon style={{ color: "rgb(0 172 193)" }} />,
       onClick: () => history.push("/form"),
     },
+
+    {
+      text: "My studies",
+      icon: <MailIcon style={{ color: "rgb(0 172 193)" }} />,
+      onClick: () => history.push("/user-study"),
+    },
+    {
+      text: "My seq",
+      icon: <HomeIcon style={{ color: "rgb(0 172 193)" }} />,
+      onClick: () => history.push("/users-seq"),
+    },
+    {
+      text: "Stepper",
+      icon: <HomeIcon style={{ color: "rgb(0 172 193)" }} />,
+      onClick: () => history.push("/stepper"),
+    },
+    {
+      text: "My metadata",
+      icon: <HomeIcon style={{ color: "rgb(0 172 193)" }} />,
+      onClick: () => history.push("/users-meta"),
+    },
   ];
 
   return (
     <Grid
       container
       item
-      direction="column"
-      justify="center"
+      direction="row"
+      justify="space-between"
       alignItems="center"
       xs={12}
       className={classes.grid_container}
     >
-      <AppBar position="fixed" className={clsx(classes.colour)} elevation={0}>
+      <AppBar position="static" className={clsx(classes.colour)} elevation={0}>
         <Toolbar
           className={classes.AppBar}
           disableGutters={false}
           square="true"
         >
-          <Card elevation={0} square={true}>
+          <Grid item className={classes.card_container}>
             <List style={flexContainer}>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                onClick={props.click}
-              >
-                <MenuIcon style={{ color: "rgb(0 172 193)" }} />
-                <ListItemText primary={"Show"} />
-              </IconButton>
-              {itemsList.map((item, index) => {
+              {menulist.map((item, index) => {
                 const { text, icon, onClick } = item;
                 return (
-                  <ListItem button key={text} onClick={onClick}>
-                    {icon && <ListItemIcon>{icon}</ListItemIcon>}
-                    <ListItemText primary={text} />
-                  </ListItem>
+                  <Card elevation={0} square={true}>
+                    <ListItem button key={text} onClick={onClick}>
+                      {icon && <ListItemIcon>{icon}</ListItemIcon>}
+                      <ListItemText primary={text} />
+
+                      <Menu
+                        id="simple-menu"
+                        anchorEl={anchorRef.current}
+                        keepMounted
+                        open={open}
+                        onClose={handleClose}
+                      >
+                        {itemsList.map((item, index) => {
+                          const { text, icon, onClick } = item;
+                          return (
+                            <Card elevation={0} square={true}>
+                              <ListItem button key={text} onClick={onClick}>
+                                {icon && <ListItemIcon>{icon}</ListItemIcon>}
+                                <ListItemText primary={text} />
+                              </ListItem>
+                            </Card>
+                          );
+                        })}
+                      </Menu>
+                    </ListItem>
+                  </Card>
                 );
               })}
             </List>
-          </Card>
+          </Grid>
+          <Grid item>
+            <IconButton ref={anchorRef} onClick={handleToggle} edge="end">
+              <AccountCircleIcon fontSize="large" style={{ color: "white" }} />
+            </IconButton>
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorRef.current}
+              keepMounted
+              open={open}
+              onClose={handleClose}
+            >
+              {itemsList.map((item, index) => {
+                const { text, icon, onClick } = item;
+                return (
+                  <Card elevation={0} square={true}>
+                    <ListItem button key={text} onClick={onClick}>
+                      {icon && <ListItemIcon>{icon}</ListItemIcon>}
+                      <ListItemText primary={text} />
+                    </ListItem>
+                  </Card>
+                );
+              })}
+            </Menu>
+          </Grid>
         </Toolbar>
       </AppBar>
     </Grid>

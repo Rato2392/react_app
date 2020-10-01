@@ -10,11 +10,10 @@ import {
 
 import { makeStyles } from "@material-ui/styles";
 
-import Iceberg from "C:\\Users\\João\\react-app\\src\\components\\images\\iceberg.jpg";
+import Iceberg from "../images/iceberg.jpg";
 
 const useStyles = makeStyles(() => ({
   root: {
-    minWidth: 275,
     borderRadius: 0,
     outline: "false",
   },
@@ -47,15 +46,15 @@ const TextBox = () => {
     <Grid
       container
       direction="row"
-      spacing={2}
-      justify="center"
+      item
+      xs={12}
       position="static"
+      justify="center"
+      alignItems="center"
     >
       <Grid
-        container
         item
         xs={12}
-        sm={8}
         justify="center"
         alignItems="center"
         direction="column"
@@ -65,7 +64,7 @@ const TextBox = () => {
           <CardContent>
             <Typography className={classes.title} color="initial">
               <b>BioData.pt </b>
-              is the Portuguese distributed e-infrastructure for biological data
+              is the Portuguese distributed infrastructure for biological data
               and the Portuguese
               <Link
                 className={classes.link_color}
@@ -108,24 +107,7 @@ const TextBox = () => {
         justify="center"
         alignItems="center"
         direction="column"
-      >
-        <Card
-          item="true"
-          className={classes.root}
-          elevation={0}
-          square={true}
-          xs={12}
-          sm={6}
-        >
-          <CardMedia
-            img="true"
-            src={Iceberg}
-            className={classes.iceberg_root}
-            width="244"
-            component="img"
-          />
-        </Card>
-      </Grid>
+      ></Grid>
     </Grid>
   );
 };
